@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Sarah! 🎀</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #79546e;
+  text-align: center;
+  background: linear-gradient(135deg, #fff0f6, #f0fff4, #f0f4ff, #fff8e8);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 55px 18px 35px;
+  animation: appear .6s ease;
+}
+
+.page.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: clamp(30px, 8vw, 46px);
+  color: #df83ad;
+  line-height: 1.25;
+}
+
+h2 { color: #b987ce; }
+
+p {
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.card {
+  max-width: 520px;
+  margin: 25px auto;
+  padding: 25px 20px;
+  background: rgba(255,255,255,.82);
+  border: 2px solid #ffe0ed;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px #d9b6ce38;
+}
+
+button {
+  border: none;
+  border-radius: 25px;
+  padding: 14px 22px;
+  margin: 8px 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #865d80;
+  background: #ffddec;
+  box-shadow: 0 4px 0 #eabbd3;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+button:active { transform: scale(.95); }
+button:disabled { opacity: .5; }
+
+.lilac { background: #eadbff; box-shadow: 0 4px 0 #d1b5ec; }
+.mint { background: #d9f7e6; box-shadow: 0 4px 0 #b6e3ca; }
+.blue { background: #dcecff; box-shadow: 0 4px 0 #bdd6f2; }
+
+.decoration {
+  font-size: 26px;
+  letter-spacing: 7px;
+  margin: 20px 0;
+}
+
+.small { font-size: 14px; }
+
+.heart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 420px;
+  margin: 25px auto;
+}
+
+.heart {
+  min-height: 105px;
+  font-size: 38px;
+  padding: 12px 5px;
+  margin: 0;
+  box-shadow: none;
+  background: #fff;
+  border: 2px solid #f8d7eb;
+}
+
+.heart span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.answer {
+  display: block;
+  width: 100%;
+  max-width: 390px;
+  margin: 10px auto;
+  background: white;
+  border: 2px solid #f3d9ea;
+  box-shadow: none;
+}
+
+.feedback {
+  background: #fff4fa;
+  border-radius: 18px;
+  padding: 16px;
+  margin: 18px auto;
+  max-width: 440px;
+  line-height: 1.8;
+}
+
+.butterfly {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  animation: floatup 8s linear forwards;
+  z-index: 5;
+}
+
+@keyframes floatup {
+  to { transform: translateY(-110vh) rotate(30deg); opacity: 0; }
+}
+
+.cake {
+  font-size: 105px;
+  margin: 20px 0;
+}
+
+.candle {
+  display: inline-block;
+  margin: 4px;
+  font-size: 38px;
+  cursor: pointer;
+  border: none;
+  padding: 4px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.candle.out { opacity: .45; }
+
+.letter {
+  white-space: pre-line;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  margin-top: 35px;
+  font-size: 13px;
+  color: #b58ba8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <div class="decoration">🎀 🦋 🌷 ✨</div>
+  <p>♡ A little world made just for you ♡</p>
+  <h1>Happy Birthday,<br>Sarah! 💗</h1>
+  <p>Today is all about you, my girl</p>
+  <div class="decoration">🌸 💕 🦋 🌸</div>
+  <button onclick="go(2)">Open your surprise 🎁</button>
+  <div class="footer">Made with love, just for you ♡</div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <div class="decoration">💌 🎀 🌷</div>
+  <h1>A Little Letter for You</h1>
+  <div class="card letter" dir="auto">
+كل عام وانت بخيرررر سنينك كتار و حلوين كومة🥹💗
+
+انشاءالله بشوفك دائما مبسوطه و عم تضحكي وتعيشي و ابعتلك ريلات حبايب وما تردي عليهن و عيش و ضل احكي عتحسين عندك ونعمل المصايب سوا احلى كومة بالعالم الكومات للكومات😋💗
+  </div>
+  <button onclick="go(3)">One more surprise? 🦋</button>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <div class="decoration">💗 💜 🩵 🤍</div>
+  <h1>Reasons Why I Love You</h1>
+  <p>Tap every heart to discover a little reason! 🎀</p>
+  <div class="heart-grid">
+    <button class="heart" style="color:#83bde8" onclick="reveal(0,this)">🩵<span>Tap me!</span></button>
+    <button class="heart" style="color:#ed8eb8" onclick="reveal(1,this)">🩷<span>Tap me!</span></button>
+    <button class="heart" style="color:#c4a8db" onclick="reveal(2,this)">🤍<span>Tap me!</span></button>
+    <button class="heart" style="color:#75cba0" onclick="reveal(3,this)">💚<span>Tap me!</span></button>
+    <button class="heart" style="color:#a88bd5" onclick="reveal(4,this)">💜<span>Tap me!</span></button>
+    <button class="heart" style="color:#ed8eb8" onclick="reveal(5,this)">🩷<span>Tap me!</span></button>
+    <button class="heart" style="color:#83bde8" onclick="reveal(6,this)">🩵<span>Tap me!</span></button>
+  </div>
+  <div class="feedback" id="heartText">Your little surprises are waiting here! 💌</div>
+  <button onclick="go(4)">Ready for another surprise? 🦋</button>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <div class="decoration">🦋 🎀 🦋</div>
+  <h1>How Well Do You Know Us?</h1>
+  <p>Let's see if you can pass this little test! 🤭💗</p>
+  <div class="card">
+    <h2 id="qTitle">Question 1</h2>
+    <p id="question"></p>
+    <div id="answers"></div>
+    <div class="feedback" id="quizFeedback" hidden></div>
+    <button id="nextQuestion" onclick="nextQ()" hidden>Next Question ➜</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+  <div class="decoration">🎂 🎀 ✨</div>
+  <h1>Make a Birthday Wish!</h1>
+  <p>Tap each candle to blow it out! 🥹💗</p>
+  <div class="cake">🎂</div>
+  <div id="candles">
+    <button class="candle" onclick="blow(this)">🕯️</button>
+    <button class="candle" onclick="blow(this)">🕯️</button>
+    <button class="candle" onclick="blow(this)">🕯️</button>
+  </div>
+  <p id="candleText">Make a wish, Sarah! 🌷</p>
+  <button id="wishButton" onclick="showWish()" hidden>Open your last surprise 💌</button>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page" id="page6">
+  <div class="decoration">🌷 💗 🦋 ✨</div>
+  <h1>A Little Wish for You</h1>
+  <div class="card letter" dir="auto">
+واخر شي بتمنى دائما نضل رفقات و دائيما شوفك مبسوطه و عم تعملي الشي اللي انت بدك ياه و شوفك وين ما انت بتتمني و عقبال ما تكبر وتحي تحسين تخطبني لأنو حتكون ميته علي(من رجلي) بس المهم انو كل عام وانت بخيررر و انشاءالله العمر كلوو و دائما بيسطيز و كومة الاستقرار والامان للأبد😂💗
+  </div>
+  <div class="decoration">🎀 💗 🌷 🦋</div>
+  <p>Happy Birthday, my girl! 🎂💗</p>
+  <button onclick="go(1)">Read it all again 💌</button>
+  <div class="footer">A tiny birthday world made with love ♡</div>
+</section>
+
+<script>
+const reasons = [
+  "كتير بستمتع بالحكي معك",
+  "قلتش من الذبات",
+  "شخصيتك",
+  "شكلك كامله مكمله",
+  "كتير بتخليني مبسوطه",
+  "طبعا لأنك اخت تحسين",
+  "الستريكات والستوري تايم"
+];
+
+let openedHearts = new Set();
+
+function go(n) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page" + n).classList.add("active");
+  window.scrollTo(0,0);
+  if(n === 4) renderQ();
+  if(n === 3) burst();
+}
+
+function reveal(i,btn) {
+  document.getElementById("heartText").textContent = reasons[i];
+  openedHearts.add(i);
+  btn.querySelector("span").textContent = "Opened! 💗";
+  btn.style.transform = "scale(1.08)";
+  burst();
+}
+
+const questions = [
+  {
+    q: "شو اكتر شي بحب احكي عنو معك؟",
+    a: ["تحسين","بنات الشله","اشياء مال امها داعي"],
+    correct: [0],
+    yes: "الله يسامحك هيك بتاخدي فكره عني😂",
+    no: "طبعا تحسين هو هاد سؤال؟"
+  },
+  {
+    q: "شو اكتر شي بتتوقعيني بيعجبني فيكي؟",
+    a: ["شكلك","نكتك","انو عندك تحسين بالبيت","شخصيتك"],
+    correct: [0,3],
+    yes: "كتير بحب ملامحك وكتير بشوفك حلوه و يوجين بشوفك حلوه و كتير بتضحكي فخلص امنتي مستقبلك😂💗",
+    no: "الله يسامحك بس😂😂",
+    multi: true
+  },
+  {
+    q: "شو اكتر شي ممكن نعمله سوا؟ 😂",
+    a: ["ندرس ونصير ناس مسؤولة 📚","نحكي عن تحسين 🤡","نعمل مصيبة ونضحك عليها 😭"],
+    correct: [1,2],
+    yes: "طيب الحمدلله لساتك بتعرفيني 😂💗",
+    no: "اكيد تحسين محور الحياة",
+    multi: true
+  }
+];
+
+let qi = 0;
+let selected = new Set();
+let answered = false;
+
+function renderQ() {
+  qi = 0;
+  selected = new Set();
+  answered = false;
+  showQ();
+}
+
+function showQ() {
+  let q = questions[qi];
+  document.getElementById("qTitle").textContent = "Question " + (qi+1) + " of " + questions.length;
+  document.getElementById("question").textContent = q.q;
+  document.getElementById("answers").innerHTML = "";
+  document.getElementById("quizFeedback").hidden = true;
+  document.getElementById("nextQuestion").hidden = true;
+  document.getElementById("nextQuestion").textContent =
+    qi === questions.length-1 ? "One Last Surprise! 🎂" : "Next Question ➜";
+
+  q.a.forEach((a,i) => {
+    let b = document.createElement("button");
+    b.className = "answer";
+    b.textContent = a;
+    b.onclick = () => choose(i,b);
+    document.getElementById("answers").appendChild(b);
+  });
+
+  if(q.multi) {
+    let note = document.createElement("p");
+    note.className = "small";
+    note.textContent = "اختاري جوابين 💗";
+    document.getElementById("answers").appendChild(note);
+
+    let done = document.createElement("button");
+    done.textContent = "Check my answer 💌";
+    done.onclick = checkMulti;
+    done.id = "checkMulti";
+    document.getElementById("answers").appendChild(done);
+  }
+}
+
+function choose(i,b) {
+  if(answered) return;
+  let q = questions[qi];
+
+  if(q.multi) {
+    if(selected.has(i)) {
+      selected.delete(i);
+      b.style.background = "white";
+    } else if(selected.size < 2) {
+      selected.add(i);
+      b.style.background = "#f7dff0";
+    }
+    return;
+  }
+
+  answered = true;
+  document.querySelectorAll(".answer").forEach(x => x.disabled = true);
+  let correct = q.correct.includes(i);
+  showFeedback(correct ? q.yes : q.no);
+}
+
+function checkMulti() {
+  if(answered) return;
+  answered = true;
+  let q = questions[qi];
+  let correct = selected.size === q.correct.length &&
+                q.correct.every(x => selected.has(x));
+  document.querySelectorAll(".answer").forEach(x => x.disabled = true);
+  document.getElementById("checkMulti").disabled = true;
+  showFeedback(correct ? q.yes : q.no);
+}
+
+function showFeedback(text) {
+  let f = document.getElementById("quizFeedback");
+  f.textContent = text;
+  f.hidden = false;
+  document.getElementById("nextQuestion").hidden = false;
+  burst();
+}
+
+function nextQ() {
+  if(qi < questions.length-1) {
+    qi++;
+    selected = new Set();
+    answered = false;
+    showQ();
+  } else {
+    go(5);
+  }
+}
+
+function blow(btn) {
+  if(btn.classList.contains("out")) return;
+  btn.textContent = "💨";
+  btn.classList.add("out");
+  btn.disabled = true;
+
+  let remaining = document.querySelectorAll(".candle:not(.out)").length;
+  if(remaining === 0) {
+    document.getElementById("candleText").textContent = "You did it! Make your biggest wish, Sarah! ✨💗";
+    document.getElementById("wishButton").hidden = false;
+    burst();
+  }
+}
+
+function showWish() { go(6); }
+
+function burst() {
+  const emojis = ["💗","🦋","✨","🌸","🎀"];
+  for(let i=0; i<7; i++) {
+    let el = document.createElement("span");
+    el.className = "butterfly";
+    el.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+    el.style.left = Math.random()*100 + "vw";
+    el.style.animationDuration = (5+Math.random()*4) + "s";
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 9500);
+  }
+}
+</script>
+</body>
+</html>
